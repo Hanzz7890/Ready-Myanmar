@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Preparedness Checklist | Ready Myanmar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="checklist.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl bg-white border-bottom py-3 sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-shield-fill-check brand-icon" aria-hidden="true"></i>
+                <span>Ready <strong>Myanmar</strong></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UnderstandTR.html">Understand the Risks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreRG.html">Explore Regions</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle active" type="button" id="prepareDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Prepare
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="prepareDropdown">
+                            <li>
+                                <a class="dropdown-item" href="Prepare.html">
+                                    <i class="bi bi-backpack me-2" aria-hidden="true"></i>
+                                    Preparation Overview
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item active" href="Checklist.html" aria-current="page">
+                                    <i class="bi bi-list-check me-2" aria-hidden="true"></i>
+                                    Household Checklist
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="SafetyGuides.html">
+                                    <i class="bi bi-shield-check me-2" aria-hidden="true"></i>
+                                    Safety Guides
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">Resources</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex flex-wrap gap-2 mt-3 mt-xl-0">
+                    <a class="btn btn-green" href="SafetyGuides.html">Find Safety Guidance</a>
+
+                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                        Log in
+                    </button>
+
+                    <button class="btn btn-outline-green" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">
+                        Sign up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="Prepare.html">Prepare</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Checklist</li>
+                    </ol>
+                </nav>
+
+                <p class="eyebrow">READY MYANMAR</p>
+                <h1>My Preparedness Checklist</h1>
+
+                <p class="hero-description">
+                    A flexible starting point for supplies and household conversations.
+                    Adapt it to your needs and local guidance.
+                </p>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="container">
+                <p class="fw-bold mb-2" id="progressText" role="status"></p>
+
+                <div class="progress" id="checkProgress" role="progressbar" aria-label="Checklist completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <p class="small text-secondary mt-3" id="saveStatus" role="status">
+                    Progress is saved in this browser. Clearing browser data removes it.
+                </p>
+
+                <div class="row g-3 align-items-end my-4 no-print">
+                    <div class="col-md-5">
+                        <label class="form-label" for="categoryFilter">Category</label>
+                        <select class="form-select" id="categoryFilter">
+                            <option value="all">All categories</option>
+                            <option>Water and food</option>
+                            <option>Health and hygiene</option>
+                            <option>Communication</option>
+                            <option>Household planning</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="form-label" for="statusFilter">Show</label>
+                        <select class="form-select" id="statusFilter">
+                            <option value="all">All items</option>
+                            <option value="remaining">Remaining items</option>
+                            <option value="completed">Completed items</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <button class="btn btn-outline-green w-100" type="button" id="printChecklist">
+                            <i class="bi bi-printer me-1" aria-hidden="true"></i>
+                            Print
+                        </button>
+                    </div>
+                </div>
+
+                <div class="checklist-items" id="checklistItems"></div>
+                <p class="empty-message mt-3" id="emptyChecklist" hidden>No items match these filters.</p>
+
+                <form class="content-panel mt-4 no-print" id="customItemForm">
+                    <h2>Add your own item</h2>
+
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-6">
+                            <label class="form-label" for="customItemText">Item</label>
+                            <input class="form-control" type="text" id="customItemText" placeholder="Add something your household needs" maxlength="120" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label" for="customItemCategory">Category</label>
+                            <select class="form-select" id="customItemCategory">
+                                <option>Water and food</option>
+                                <option>Health and hygiene</option>
+                                <option>Communication</option>
+                                <option>Household planning</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <button class="btn btn-green w-100" type="submit">Add item</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="d-flex flex-wrap gap-3 mt-4 no-print">
+                    <button class="btn btn-outline-green" type="button" id="resetProgress">
+                        Reset progress
+                    </button>
+
+                    <button class="btn btn-outline-secondary" type="button" id="clearChecklist">
+                        Clear progress and custom items
+                    </button>
+                </div>
+
+                <p class="info-note mt-4">
+                    Completion shows tasks you have marked done. It is not a safety
+                    score or a guarantee that your household is fully prepared.
+                </p>
+
+                <div class="source-links">
+                    <a href="https://www.ready.gov/sites/default/files/2022-04/ready_checklist.pdf">
+                        Ready.gov — Emergency supply checklist
+                    </a>
+                </div>
+
+                <noscript>
+                    <p class="info-note mt-4">Enable JavaScript to use and save this checklist.</p>
+                </noscript>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <a class="footer-logo" href="index.html">
+                        <i class="bi bi-shield-fill-check" aria-hidden="true"></i>
+                        <span>Ready <strong>Myanmar</strong></span>
+                    </a>
+                    <p class="mt-3">Know the hazards. Be better prepared.</p>
+                    <p class="small">
+                        A Year 9 Fuchsia project helping communities in Myanmar
+                        understand disaster risks and explore practical preparation ideas.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="UnderstandTR.html">Understand the Risks</a></li>
+                        <li><a href="ExploreRG.html">Explore Regions</a></li>
+                        <li><a href="Prepare.html">Prepare</a></li>
+                        <li><a href="Checklist.html">Household Checklist</a></li>
+                        <li><a href="SafetyGuides.html">Safety Guides</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h3>Disaster Types</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="UnderstandTR.html#earthquakes">Earthquakes</a></li>
+                        <li><a href="UnderstandTR.html#landslides">Landslides</a></li>
+                        <li><a href="UnderstandTR.html#subsidence">Subsidence and Sinkholes</a></li>
+                        <li><a href="UnderstandTR.html#tsunamis">Tsunamis</a></li>
+                        <li><a href="UnderstandTR.html#flooding">Flooding</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <h3>Regions</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="ExploreRG.html#yangon">Yangon</a></li>
+                        <li><a href="ExploreRG.html#bago">Bago</a></li>
+                        <li><a href="ExploreRG.html#ayeyarwady">Ayeyarwady</a></li>
+                        <li><a href="ExploreRG.html#mon">Mon</a></li>
+                        <li><a href="ExploreRG.html#tanintharyi">Tanintharyi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Ready Myanmar. Created by Year 9 Fuchsia students.</p>
+                <p class="mb-0">For education and awareness. Not a live emergency warning service.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-4" id="loginTitle">Welcome back</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <p class="text-secondary small">School demonstration only. No real login takes place.</p>
+
+                    <form id="loginForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="loginEmail">Email address</label>
+                            <input class="form-control" type="email" id="loginEmail" autocomplete="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="loginPassword">Password</label>
+                            <input class="form-control" type="password" id="loginPassword" autocomplete="current-password" minlength="8" required>
+                            <div class="form-text">Use at least 8 characters for this demo.</div>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="showLoginPassword">
+                            <label class="form-check-label" for="showLoginPassword">Show password</label>
+                        </div>
+
+                        <button class="btn btn-green w-100" type="submit">Log in</button>
+                        <p class="form-message" id="loginMessage" role="status"></p>
+                    </form>
+
+                    <p class="text-center mt-4 mb-0">
+                        Don't have an account?
+                        <button class="btn btn-link p-0 align-baseline" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-4" id="signupTitle">Create an account</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <p class="text-secondary small">Try the form. Your details are not saved or sent anywhere.</p>
+
+                    <form id="signupForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="signupName">Full name</label>
+                            <input class="form-control" type="text" id="signupName" autocomplete="name" minlength="2" maxlength="80" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="signupEmail">Email address</label>
+                            <input class="form-control" type="email" id="signupEmail" autocomplete="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="signupPassword">Password</label>
+                            <input class="form-control" type="password" id="signupPassword" autocomplete="new-password" minlength="8" required>
+                            <div class="form-text">Use at least 8 characters.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="confirmPassword">Confirm password</label>
+                            <input class="form-control" type="password" id="confirmPassword" autocomplete="new-password" required>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="showSignupPassword">
+                            <label class="form-check-label" for="showSignupPassword">Show passwords</label>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="demoAgreement" required>
+                            <label class="form-check-label" for="demoAgreement">I understand this is a school demonstration.</label>
+                        </div>
+
+                        <button class="btn btn-green w-100" type="submit">Sign up</button>
+                        <p class="form-message" id="signupMessage" role="status"></p>
+                    </form>
+
+                    <p class="text-center mt-4 mb-0">
+                        Already have an account?
+                        <button class="btn btn-link p-0 align-baseline" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="checklist.js"></script>
+</body>
+</html>

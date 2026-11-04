@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Myanmar | Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl bg-white border-bottom py-3 sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-current="page">
+                <i class="bi bi-shield-fill-check brand-icon" aria-hidden="true"></i>
+                <span>Ready <strong>Myanmar</strong></span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UnderstandTR.html">
+                            Understand the Risks
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreRG.html">
+                            Explore Regions
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <button
+                            class="nav-link dropdown-toggle"
+                            type="button"
+                            id="prepareDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Prepare
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="prepareDropdown">
+                            <li>
+                                <a class="dropdown-item" href="Prepare.html">
+                                    <i class="bi bi-backpack me-2" aria-hidden="true"></i>
+                                    Preparation Overview
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="Checklist.html">
+                                    <i class="bi bi-list-check me-2" aria-hidden="true"></i>
+                                    Household Checklist
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="SafetyGuides.html">
+                                    <i class="bi bi-shield-check me-2" aria-hidden="true"></i>
+                                    Safety Guides
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">
+                            Resources
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-flex flex-wrap gap-2 mt-3 mt-xl-0">
+                    <a class="btn btn-green" href="SafetyGuides.html">
+                        Find Safety Guidance
+                    </a>
+
+                    <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                    >
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                        Log in
+                    </button>
+
+                    <button
+                        class="btn btn-outline-green"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#signupModal"
+                    >
+                        Sign up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <p class="eyebrow">
+                            COMMUNITY LEARNING FOR SAFER CHOICES
+                        </p>
+
+                        <h1>
+                            Understand the risks.
+                            <span>Prepare with confidence.</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Explore disaster information, learn about different
+                            regions, and take simple steps towards household
+                            preparedness.
+                        </p>
+
+                        <div class="hero-buttons d-flex flex-wrap gap-3 mt-4">
+                            <a class="btn btn-green btn-lg" href="UnderstandTR.html">
+                                Explore Disaster Risks
+                                <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="btn btn-outline-green btn-lg" href="Checklist.html">
+                                Start My Checklist
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-picture">
+                            <img
+                                class="img-fluid"
+                                src="Three-step household preparedness guide.png"
+                                alt="Understand your area, know what to do, and prepare together."
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="steps-section">
+            <div class="container">
+                <p class="eyebrow">
+                    A LITTLE KNOWLEDGE GOES A LONG WAY
+                </p>
+
+                <h2>Three steps towards preparedness</h2>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="icon-box">
+                                        <i class="bi bi-book" aria-hidden="true"></i>
+                                    </div>
+
+                                    <span class="step-number">01</span>
+                                </div>
+
+                                <h3>Understand Your Risks</h3>
+
+                                <p>
+                                    Explore different hazards and learn why their
+                                    effects vary between places.
+                                </p>
+
+                                <a class="text-link mt-auto" href="UnderstandTR.html">
+                                    Get started
+                                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="icon-box">
+                                        <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                                    </div>
+
+                                    <span class="step-number">02</span>
+                                </div>
+
+                                <h3>Explore Your Region</h3>
+
+                                <p>
+                                    Find regional information and explore the
+                                    locations included in our project.
+                                </p>
+
+                                <a class="text-link mt-auto" href="ExploreRG.html">
+                                    Get started
+                                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="icon-box">
+                                        <i class="bi bi-backpack" aria-hidden="true"></i>
+                                    </div>
+
+                                    <span class="step-number">03</span>
+                                </div>
+
+                                <h3>Prepare Your Household</h3>
+
+                                <p>
+                                    Organize a household plan and work through
+                                    a simple preparation checklist.
+                                </p>
+
+                                <a class="text-link mt-auto" href="Prepare.html">
+                                    Get started
+                                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="green-section">
+            <div class="container">
+                <div class="section-heading d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                    <div>
+                        <p class="eyebrow">UNDERSTAND THE RISKS</p>
+                        <h2>Start with a hazard.</h2>
+                        <p class="mb-0">
+                            Different hazards call for different actions.
+                        </p>
+                    </div>
+
+                    <a class="text-link" href="UnderstandTR.html">
+                        View all hazards
+                        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="icon-box mb-4">
+                                    <i class="bi bi-activity" aria-hidden="true"></i>
+                                </div>
+
+                                <h3>Earthquakes</h3>
+                                <p>Learn about ground shaking and its effects.</p>
+
+                                <a class="text-link mt-auto" href="UnderstandTR.html#earthquakes">
+                                    Explore hazard
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="icon-box mb-4">
+                                    <i class="bi bi-triangle" aria-hidden="true"></i>
+                                </div>
+
+                                <h3>Landslides</h3>
+                                <p>Explore the movement of soil and rock down slopes.</p>
+
+                                <a class="text-link mt-auto" href="UnderstandTR.html#landslides">
+                                    Explore hazard
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="icon-box mb-4">
+                                    <i class="bi bi-layers" aria-hidden="true"></i>
+                                </div>
+
+                                <h3>Subsidence and Sinkholes</h3>
+                                <p>Understand ground sinking and local collapse.</p>
+
+                                <a class="text-link mt-auto" href="UnderstandTR.html#subsidence">
+                                    Explore hazard
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="icon-box mb-4">
+                                    <i class="bi bi-water" aria-hidden="true"></i>
+                                </div>
+
+                                <h3>Tsunamis</h3>
+                                <p>Learn about tsunami waves and coastal exposure.</p>
+
+                                <a class="text-link mt-auto" href="UnderstandTR.html#tsunamis">
+                                    Explore hazard
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card feature-card h-100">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="icon-box mb-4">
+                                    <i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i>
+                                </div>
+
+                                <h3>Flooding and Related Risks</h3>
+                                <p>Explore connections between water and the land.</p>
+
+                                <a class="text-link mt-auto" href="UnderstandTR.html#flooding">
+                                    Explore hazard
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <p class="section-note small mt-4 mb-0">
+                    Geological hazards are our focus. Flooding is a connected
+                    hydrological hazard.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <p class="eyebrow">REGIONAL SPOTLIGHT</p>
+                        <h2>Close to home.<br>Lower Myanmar</h2>
+
+                        <p>
+                            Explore the places at the heart of our project,
+                            with regional context and historical information.
+                        </p>
+
+                        <p class="small text-secondary mb-0">
+                            “Lower Myanmar” describes our project focus, not a
+                            precise official administrative boundary.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <a class="region-link" href="ExploreRG.html#yangon">
+                                    Yangon
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <a class="region-link" href="ExploreRG.html#bago">
+                                    Bago
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <a class="region-link" href="ExploreRG.html#ayeyarwady">
+                                    Ayeyarwady
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <a class="region-link" href="ExploreRG.html#mon">
+                                    Mon
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <a class="region-link" href="ExploreRG.html#tanintharyi">
+                                    Tanintharyi
+                                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ideas-box mt-5" role="region" aria-label="Preparation ideas">
+                    <div aria-live="polite" aria-atomic="true">
+                        <article class="slide">
+                            <div class="icon-box mb-4">
+                                <i class="bi bi-people" aria-hidden="true"></i>
+                            </div>
+
+                            <p class="eyebrow">IDEA 01</p>
+                            <h3>Start a household conversation.</h3>
+
+                            <p>
+                                Discuss what each person would need help with
+                                and record important questions in your plan.
+                            </p>
+
+                            <a class="text-link" href="Prepare.html">
+                                Explore preparation
+                                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+
+                        <article class="slide" hidden>
+                            <div class="icon-box mb-4">
+                                <i class="bi bi-journal-check" aria-hidden="true"></i>
+                            </div>
+
+                            <p class="eyebrow">IDEA 02</p>
+                            <h3>Keep your information together.</h3>
+
+                            <p>
+                                Use a household checklist to organize your
+                                preparation tasks and contact information.
+                            </p>
+
+                            <a class="text-link" href="Checklist.html">
+                                Open the checklist
+                                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+
+                        <article class="slide" hidden>
+                            <div class="icon-box mb-4">
+                                <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
+                            </div>
+
+                            <p class="eyebrow">IDEA 03</p>
+                            <h3>Return to your plan.</h3>
+
+                            <p>
+                                Review your checklist with your household
+                                and update information when it changes.
+                            </p>
+
+                            <a class="text-link" href="Checklist.html">
+                                Review your checklist
+                                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+                    </div>
+
+                    <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
+                        <button
+                            class="btn btn-outline-green arrow-button"
+                            type="button"
+                            id="previous-slide"
+                            aria-label="Previous idea"
+                        >
+                            <i class="bi bi-arrow-left" aria-hidden="true"></i>
+                        </button>
+
+                        <span id="slide-count">1 / 3</span>
+
+                        <button
+                            class="btn btn-outline-green arrow-button"
+                            type="button"
+                            id="next-slide"
+                            aria-label="Next idea"
+                        >
+                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="learning-banner">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <p class="eyebrow">FEATURED LEARNING</p>
+                            <h2>A hazard is only part of the story.</h2>
+
+                            <p class="mb-0">
+                                Explore how exposure, vulnerability and preparedness
+                                influence the effects on a community.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 text-lg-end">
+                            <a class="btn btn-cream" href="UnderstandTR.html#understanding-risk">
+                                Explore the explanation
+                                <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-strip d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
+                    <div>
+                        <h3 class="mb-2">Continue your learning</h3>
+                        <p class="mb-0">
+                            Visit our resources page for supporting materials.
+                        </p>
+                    </div>
+
+                    <a class="btn btn-outline-green" href="Resources.html">
+                        Explore Resources
+                        <i class="bi bi-arrow-up-right ms-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <p class="eyebrow">MADE TO INFORM. DESIGNED TO HELP.</p>
+                <h2>A student project with a community purpose.</h2>
+
+                <p>
+                    Created by Year 9 Fuchsia students, Ready Myanmar brings
+                    together information and simple ICT tools to support
+                    disaster-risk education.
+                </p>
+
+                <p class="small text-secondary mb-0">
+                    This is an educational project, not a live warning service.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <a class="footer-logo" href="index.html">
+                        <i class="bi bi-shield-fill-check" aria-hidden="true"></i>
+                        <span>Ready <strong>Myanmar</strong></span>
+                    </a>
+
+                    <p class="mt-3">Know the hazards. Be better prepared.</p>
+
+                    <p class="small">
+                        A Year 9 Fuchsia project helping communities in Myanmar
+                        understand disaster risks and explore practical
+                        preparation ideas.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h3>Quick Links</h3>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="UnderstandTR.html">Understand the Risks</a></li>
+                        <li><a href="ExploreRG.html">Explore Regions</a></li>
+                        <li><a href="Prepare.html">Prepare</a></li>
+                        <li><a href="Checklist.html">Household Checklist</a></li>
+                        <li><a href="SafetyGuides.html">Safety Guides</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h3>Disaster Types</h3>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="UnderstandTR.html#earthquakes">Earthquakes</a></li>
+                        <li><a href="UnderstandTR.html#landslides">Landslides</a></li>
+                        <li><a href="UnderstandTR.html#subsidence">Subsidence and Sinkholes</a></li>
+                        <li><a href="UnderstandTR.html#tsunamis">Tsunamis</a></li>
+                        <li><a href="UnderstandTR.html#flooding">Flooding</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <h3>Regions</h3>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="ExploreRG.html#yangon">Yangon</a></li>
+                        <li><a href="ExploreRG.html#bago">Bago</a></li>
+                        <li><a href="ExploreRG.html#ayeyarwady">Ayeyarwady</a></li>
+                        <li><a href="ExploreRG.html#mon">Mon</a></li>
+                        <li><a href="ExploreRG.html#tanintharyi">Tanintharyi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Ready Myanmar. Created by Year 9 Fuchsia students.</p>
+                <p class="mb-0">
+                    For education and awareness. Not a live emergency warning service.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="loginTitle"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-4" id="loginTitle">
+                        Welcome back
+                    </h2>
+
+                    <button
+                        class="btn-close"
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <p class="text-secondary small">
+                        School demonstration only. No real login takes place.
+                    </p>
+
+                    <form id="loginForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="loginEmail">
+                                Email address
+                            </label>
+
+                            <input
+                                class="form-control"
+                                type="email"
+                                id="loginEmail"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="loginPassword">
+                                Password
+                            </label>
+
+                            <input
+                                class="form-control"
+                                type="password"
+                                id="loginPassword"
+                                autocomplete="current-password"
+                                minlength="8"
+                                aria-describedby="loginHelp"
+                                required
+                            >
+
+                            <div class="form-text" id="loginHelp">
+                                Use at least 8 characters for this demo.
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="showLoginPassword"
+                            >
+
+                            <label class="form-check-label" for="showLoginPassword">
+                                Show password
+                            </label>
+                        </div>
+
+                        <button class="btn btn-green w-100" type="submit">
+                            Log in
+                        </button>
+
+                        <p class="form-message" id="loginMessage" role="status"></p>
+                    </form>
+
+                    <p class="text-center mt-4 mb-0">
+                        Don't have an account?
+                        <button
+                            class="btn btn-link p-0 align-baseline"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#signupModal"
+                        >
+                            Sign up
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="modal fade"
+        id="signupModal"
+        tabindex="-1"
+        aria-labelledby="signupTitle"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-4" id="signupTitle">
+                        Create an account
+                    </h2>
+
+                    <button
+                        class="btn-close"
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <p class="text-secondary small">
+                        Try the sign-up form. Your details are not saved or sent anywhere.
+                    </p>
+
+                    <form id="signupForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="signupName">
+                                Full name
+                            </label>
+
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="signupName"
+                                autocomplete="name"
+                                minlength="2"
+                                maxlength="80"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="signupEmail">
+                                Email address
+                            </label>
+
+                            <input
+                                class="form-control"
+                                type="email"
+                                id="signupEmail"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="signupPassword">
+                                Password
+                            </label>
+
+                            <input
+                                class="form-control"
+                                type="password"
+                                id="signupPassword"
+                                autocomplete="new-password"
+                                minlength="8"
+                                aria-describedby="signupHelp"
+                                required
+                            >
+
+                            <div class="form-text" id="signupHelp">
+                                Use at least 8 characters.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="confirmPassword">
+                                Confirm password
+                            </label>
+
+                            <input
+                                class="form-control"
+                                type="password"
+                                id="confirmPassword"
+                                autocomplete="new-password"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="showSignupPassword"
+                            >
+
+                            <label class="form-check-label" for="showSignupPassword">
+                                Show passwords
+                            </label>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="demoAgreement"
+                                required
+                            >
+
+                            <label class="form-check-label" for="demoAgreement">
+                                I understand this is a school demonstration.
+                            </label>
+                        </div>
+
+                        <button class="btn btn-green w-100" type="submit">
+                            Sign up
+                        </button>
+
+                        <p class="form-message" id="signupMessage" role="status"></p>
+                    </form>
+
+                    <p class="text-center mt-4 mb-0">
+                        Already have an account?
+                        <button
+                            class="btn btn-link p-0 align-baseline"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#loginModal"
+                        >
+                            Log in
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
